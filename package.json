@@ -1,0 +1,10 @@
+{
+  "name": "sure-group-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/build.js --watch"
+  }
+}
