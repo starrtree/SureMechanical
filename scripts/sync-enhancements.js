@@ -10,6 +10,7 @@ const files = [
   'upgrade-sections.css',
   'upgrade-portfolio.css',
   'upgrade-pages.css',
+  'responsive-polish.css',
   'upgrade.js',
   'shell.js',
   'page-tools.js',
