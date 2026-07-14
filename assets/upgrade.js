@@ -75,3 +75,37 @@ if(projectData){
   }));
   projectData.textContent=JSON.stringify(mapped).replace(/</g,'\\u003c');
 }
+
+const cinematicHero=document.querySelector('.hero--cinematic');
+if(cinematicHero&&!cinematicHero.dataset.enhanced){
+  cinematicHero.dataset.enhanced='true';
+  const actions=cinematicHero.querySelector('.hero__actions');
+  const actionLinks=actions?[...actions.querySelectorAll('a')]:[];
+  if(actionLinks[0])actionLinks[0].textContent='Explore Our Capabilities';
+  if(actionLinks[1]){
+    const label=actionLinks[1].querySelector('span');
+    if(label)label.textContent='View Featured Projects';
+  }
+
+  const visual=cinematicHero.querySelector('.hero-side-note');
+  if(visual){
+    visual.classList.add('hero-visual');
+    visual.replaceChildren();
+
+    const badge=document.createElement('span');
+    badge.className='hero-visual__badge';
+    badge.textContent='Design · Build · Service';
+
+    const caption=document.createElement('div');
+    caption.className='hero-visual__caption';
+
+    const title=document.createElement('strong');
+    title.textContent='Critical Facility Experience';
+
+    const copy=document.createElement('span');
+    copy.textContent='Trusted across healthcare, education, government, commercial and industrial environments.';
+
+    caption.append(title,copy);
+    visual.append(badge,caption);
+  }
+}
