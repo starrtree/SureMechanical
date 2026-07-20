@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { assetPath } from '@/lib/asset-path';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,7 +80,7 @@ export default function SafetyWorkforce() {
           <div className="relative aspect-[21/9] lg:aspect-[3/1]">
             {/* TEMP: Uploaded project images are being used as temporary visual placeholders until final project-specific image matching is complete. */}
             <img
-              src="/projects/photos/Worker_pic1.png"
+              src={assetPath('/projects/photos/Worker_pic1.png')}
               alt="SURE Mechanical skilled workforce in the field"
               className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"

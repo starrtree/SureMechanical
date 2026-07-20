@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { assetPath } from '@/lib/asset-path';
 
 const NAV_ITEMS = [
   { label: 'Home', href: '#hero' },
@@ -72,7 +73,7 @@ export default function Header() {
             aria-label="SURE Mechanical — Return to top"
           >
             <Image
-              src="/brand/SURE_symbol.png"
+              src={assetPath('/brand/SURE_symbol.png')}
               alt="SURE Symbol"
               width={48}
               height={48}
@@ -132,7 +133,7 @@ export default function Header() {
           {/* Mobile: SURE symbol */}
           <div className="mb-8 logo-shine rounded-lg">
             <Image
-              src="/brand/SURE_symbol.png"
+              src={assetPath('/brand/SURE_symbol.png')}
               alt="SURE Symbol"
               width={56}
               height={56}

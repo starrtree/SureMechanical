@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { assetPath } from '@/lib/asset-path';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -98,7 +99,7 @@ export default function FinalCTA() {
         <div className="cta-title opacity-0 text-center mb-16">
           <div className="mb-4">
             <Image
-              src="/brand/SURE_symbol.png"
+              src={assetPath('/brand/SURE_symbol.png')}
               alt="SURE Symbol"
               width={40}
               height={40}

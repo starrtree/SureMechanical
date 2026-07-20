@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { assetPath } from '@/lib/asset-path';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -108,7 +109,7 @@ export default function Engineering() {
             <div className="relative aspect-[4/3] rounded-sm border border-seam-line overflow-hidden bg-duct-dark/50">
               {/* TEMP: Uploaded project images are being used as temporary visual placeholders until final project-specific image matching is complete. */}
               <img
-                src="/projects/photos/RTU_pic1.png"
+                src={assetPath('/projects/photos/RTU_pic1.png')}
                 alt="Mechanical engineering BIM coordination model"
                 className="absolute inset-0 w-full h-full object-cover opacity-30"
                 loading="lazy"

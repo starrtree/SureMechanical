@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { assetPath } from '@/lib/asset-path';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,7 +41,7 @@ const SUB_COMPANIES = [
     name: 'Sure Mechanical',
     role: 'PRIMARY SYSTEM CONTRACTOR',
     description: 'Complete commercial mechanical systems — from engineering and BIM coordination through fabrication, installation, commissioning and long-term service for the most demanding facilities.',
-    logo: '/brand/SURE_MECHACNIAL_Experienced-Innovative-Diverse.png',
+    logo: assetPath('/brand/SURE_MECHACNIAL_Experienced-Innovative-Diverse.png'),
     svgX: 200, svgY: 310,
     pctLeft: 16.67, pctTop: 73.81,
   },
@@ -48,7 +49,7 @@ const SUB_COMPANIES = [
     name: 'Cincinnati Air Conditioning Co.',
     role: 'DESIGN-BUILD, SERVICE & CONTROLS',
     description: 'Legacy HVAC expertise with deep design-build capabilities, comprehensive service programs and advanced building controls integration across the Tri-State region.',
-    logo: '/brand/CAC_Logo.svg',
+    logo: assetPath('/brand/CAC_Logo.svg'),
     svgX: 600, svgY: 310,
     pctLeft: 50, pctTop: 73.81,
   },
@@ -56,7 +57,7 @@ const SUB_COMPANIES = [
     name: 'Thermolinear',
     role: 'PRECISION ENVIRONMENTS',
     description: 'Specialized in the design and construction of environmental rooms, test chambers and precision-controlled spaces for research, manufacturing and critical storage applications.',
-    logo: '/brand/Thermolinear_logo.svg',
+    logo: assetPath('/brand/Thermolinear_logo.svg'),
     svgX: 1000, svgY: 310,
     pctLeft: 83.33, pctTop: 73.81,
   },
@@ -201,7 +202,7 @@ export default function SureSystem() {
           <div className="relative">
             <div className="absolute inset-0 -m-4 rounded-full bg-cool-teal/5 blur-2xl" />
             <img
-              src="/brand/SureGroup_logo_stacked_color.png"
+              src={assetPath('/brand/SureGroup_logo_stacked_color.png')}
               alt="Sure Group — Parent Company"
               className="relative h-14 sm:h-16 lg:h-20 w-auto object-contain drop-shadow-[0_0_30px_rgba(17,197,214,0.15)]"
             />

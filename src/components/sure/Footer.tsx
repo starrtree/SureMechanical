@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 
 const FOOTER_NAV = [
   { heading: 'Company', links: ['About SURE Mechanical', 'Our Companies', 'Careers', 'Safety', 'News'] },
@@ -17,7 +18,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2">
             <Image
-              src="/brand/SURE_MECHACNIAL_Experienced-Innovative-Diverse.png"
+              src={assetPath('/brand/SURE_MECHACNIAL_Experienced-Innovative-Diverse.png')}
               alt="SURE Mechanical"
               width={240}
               height={60}

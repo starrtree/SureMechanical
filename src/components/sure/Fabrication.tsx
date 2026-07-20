@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { assetPath } from '@/lib/asset-path';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,7 +71,7 @@ export default function Fabrication() {
               >
                 {/* TEMP: Uploaded project images are being used as temporary visual placeholders until final project-specific image matching is complete. */}
                 <img
-                  src="/projects/photos/Ceiling_Work_1.png"
+                  src={assetPath('/projects/photos/Ceiling_Work_1.png')}
                   alt={`${stage} fabrication stage`}
                   className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500"
                   loading="lazy"

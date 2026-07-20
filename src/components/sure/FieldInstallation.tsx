@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { assetPath } from '@/lib/asset-path';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,7 +95,7 @@ export default function FieldInstallation() {
             <div className="relative aspect-[16/10] rounded-sm overflow-hidden border border-seam-line">
               {/* TEMP: Uploaded project images are being used as temporary visual placeholders until final project-specific image matching is complete. */}
               <img
-                src="/projects/photos/Rooftop_Work_1.png"
+                src={assetPath('/projects/photos/Rooftop_Work_1.png')}
                 alt="Field installation — rooftop mechanical equipment"
                 className="fi-image absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -123,7 +124,7 @@ export default function FieldInstallation() {
             <div className="relative aspect-[3/4] rounded-sm overflow-hidden border border-seam-line">
               {/* TEMP: Uploaded project images are being used as temporary visual placeholders until final project-specific image matching is complete. */}
               <img
-                src="/projects/photos/Worker_pic1.png"
+                src={assetPath('/projects/photos/Worker_pic1.png')}
                 alt="Skilled tradesperson performing field installation"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import Image from 'next/image';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { assetPath } from '@/lib/asset-path';
 
 const CREDIBILITY = [
   { value: '140+', label: 'Combined Employees' },
@@ -246,7 +247,7 @@ export default function Hero() {
               <div className="hero-image-card opacity-0 relative rounded-sm border-2 border-galv-silver/15 overflow-hidden">
                 {/* TEMP: Uploaded project images are being used as temporary visual placeholders until final project-specific image matching is complete. */}
                 <img
-                  src="/projects/photos/Rooftop_Work_1.png"
+                  src={assetPath('/projects/photos/Rooftop_Work_1.png')}
                   alt="SURE Mechanical field team on a commercial rooftop installation"
                   className="w-full aspect-[4/3] object-cover"
                   loading="eager"
